@@ -11,7 +11,7 @@
         for (let i = 1; i <= num; i++) {
             const elem = document.createElement('div');
             elem.setAttribute('id', i);
-            elem.setAttribute('class', 'shuffleMe' + ' color' + i);
+            elem.setAttribute('class', 'shuffle' + ' color' + i);
             elem.innerText = i;
             container.appendChild(elem);
         }
@@ -25,7 +25,7 @@
     }
 
     const getElementsAsList = () => {
-        const items = container.getElementsByClassName('shuffleMe')
+        const items = container.getElementsByClassName('shuffle')
         const elementsArray = Array.prototype.slice.call(items);
         return elementsArray;
     }
@@ -55,12 +55,12 @@
 
     document.onload();
 
-    const shuffleBtn = document.querySelector("#shufflebtn");
-    shuffleBtn.addEventListener('click', () => {
+    const btnShuffle = document.querySelector("#btnShuffle");
+    btnShuffle.addEventListener('click', () => {
         shuffle();
     });
-    const sortBtn = document.querySelector("#sortbtn");
-    sortBtn.addEventListener('click', () => {
+    const btnSort = document.querySelector("#btnSort");
+    btnSort.addEventListener('click', () => {
         sort();
     });
 })()
